@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import SubServiceAPI from '../SubServiceAPI';
+import AboutHeroSection from '../AboutSections/AboutHeroSection';
 
 function SubServices() {
     const { subServices } = useParams(); // Get the subServices from URL parameters
@@ -22,6 +23,7 @@ function SubServices() {
     return (
         <>
             <Navbar />
+            <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesName}/>
             <div className="container mx-auto p-4">
                 {matchedService ? (
                     <div>

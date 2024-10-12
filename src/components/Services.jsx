@@ -6,6 +6,7 @@ import ServicesGrid from './homepageSections/ServicesGrid';
 import PatientsReview from './PatientsReview';
 import Footer from './Footer';
 import LocationComponent from './LocationComponent';
+import Hero from './AboutSections/Hero';
 
 
 const Services = () => {
@@ -15,7 +16,8 @@ const Services = () => {
   return (
     <div>
       <Navbar />
-      <AboutHeroSection img={'contact_Hero_bg'} h2={h2}/>
+      {/* <AboutHeroSection img={'contact_Hero_bg'} h2={h2}/> */}
+      <Hero/>
       <MiddleTicker/>
       <ServicesGrid/>
       <PatientsReview/>

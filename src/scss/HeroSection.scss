@@ -2,16 +2,40 @@ header {
     overflow-x: hidden;
 }
 
-.hero_BG_IMG {
-    background-image: url('../../public/assets/About_US_Hero.webp');
+@mixin imgClassName($imgUrl) {
+    background-image: url($imgUrl);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    // padding: 100px;
     position: absolute;
-    // opacity: 40%;
     z-index: -10;
+}
+
+.hero_BG_IMG {
+    @include imgClassName('../../public/assets/hero-section-bg.jpg');   
+}
+
+.psychological-services{
+    @include imgClassName('../../public/assets/subServices/psychological-services.png');
+}
+.psychiatric-services{
+    @include imgClassName('../../public/assets/subServices/psychiatric-services.jpg');
+}
+.speech-language-therapy{
+    @include imgClassName('../../public/assets/subServices/speech-tharapy.jpg');
+}
+.career-counseling{
+    @include imgClassName('../../public/assets/subServices/career-counseling.jpg');
+}
+.rehab-services{
+    @include imgClassName('../../public/assets/subServices/treatment.jpg');
+}
+.marital-counseling{
+    @include imgClassName('../../public/assets/subServices/marital.jpg');
+}
+.treatment-psychiatric-illnesses{
+    @include imgClassName('../../public/assets/subServices/addiction.jpg');
 }
 
 .heroContent {
@@ -20,7 +44,6 @@ header {
     z-index: 1 !important;
     background-color: #0e0e22ab;
 }
-
 
 .about_hero_bg {
     background-image: url('../../public/assets/About_US_Hero.webp');
