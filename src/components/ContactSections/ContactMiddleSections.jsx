@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactForm = () => {
   return (
-    <div className="p-4 sm:p-8 md:p-12 lg:p-20 flex justify-center items-center">
+    <div id='form' className="p-4 sm:p-8 md:p-12 lg:p-20 flex justify-center items-center">
       <div className="flex flex-col lg:flex-row max-w-4xl w-full gap-8 lg:gap-20 rounded-lg">
         {/* Left Section - Form */}
         <div className="w-full lg:w-1/2 p-6 lg:p-8 bg-white rounded-md shadow-2xl">

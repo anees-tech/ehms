@@ -74,3 +74,11 @@ header {
     width: 100vw;
     height: fit-content;
 }
+
+*{
+    overflow-x: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}

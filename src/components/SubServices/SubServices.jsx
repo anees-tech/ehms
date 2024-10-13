@@ -21,7 +21,7 @@ function SubServices() {
     }, [subServices]);
 
     return (
-        <>
+        <div id='subService'>
             <Navbar />
             <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesName}/>
             <div className="container mx-auto p-4">
@@ -39,7 +39,7 @@ function SubServices() {
                 )}
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 

@@ -11,7 +11,7 @@ import SubServices from "./components/SubServices/SubServices";
 
 function App() {
   return (
-    <>
+    <div className="main">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 
