@@ -42,7 +42,7 @@ const limitWords = (text, wordLimit) => {
 
 const ServicesGrid = () => {
   return (
-    <>
+    <div id="serviceGrid">
       <h1 className="text-center text-4xl py-16 font-bold ">Our <span className="text-[#FC8602]">Services</span></h1>
       <div className="flex px-0 py-8 items-center justify-center">
         <div className=" grid grid-cols-1 items-center justify-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8">
@@ -62,7 +62,7 @@ const ServicesGrid = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

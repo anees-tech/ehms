@@ -86,7 +86,7 @@ const PatientsReview = () => {
   ];
 
   return (
-    <>
+    <div id="testimonial">
       {/* Title */}
       <div className="text-4xl font-semibold text-gray-900 flex items-center justify-center pb-12">
         <h1>
@@ -96,11 +96,11 @@ const PatientsReview = () => {
 
       {/* Cards */}
       <div className="flex justify-center items-center bg-[#FC8602]">
-        <div className="bg-[#FC8602] p-8 grid grid-cols-4 justify-center items-center gap-4">
+        <div className="bg-[#FC8602] p-8 grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4">
           {cardData.map((patient, index) => (
             <div
               key={index}
-              className="bg-white h-fit w-full md:w-64 p-4 rounded-xl flex flex-col gap-6"
+              className="bg-white h-fit w-full md:w-64 lg:w-60 xl:w-72 2xl:w-80 p-4 rounded-xl flex flex-col gap-6"
             >
               {/* User info */}
               <div className="flex items-center gap-4">
@@ -129,7 +129,7 @@ const PatientsReview = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

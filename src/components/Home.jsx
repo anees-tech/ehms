@@ -8,14 +8,14 @@ import Footer from './Footer'
 
 const Home = () => {
   return (
-    <>
+    <div id='home'>
       <Header />
       <ServicesGrid />
       <FAQs />
       <TeamExperts />
       <TraumaFocusedTherapy />
       <Footer />
-    </>
+    </div>
   )
 }
 

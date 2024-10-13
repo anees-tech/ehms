@@ -7,9 +7,9 @@ import AboutHeroSection from './AboutSections/AboutHeroSection';
 
 const Contact = () => {
   return (
-    <div>
+    <div id='contact'>
       <Navbar />
-      <AboutHeroSection img={'contact_Hero_bg'} h2={'Contact Us'} />
+      <AboutHeroSection img={'header-img-contact'} h2={'Contact Us'} />
       <MiddleTicker />
       <ContactMiddleSections />
       <Footer />

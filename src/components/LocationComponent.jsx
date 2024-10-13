@@ -20,7 +20,7 @@ const LocationComponent = () => {
       <div className="container mx-auto px-4">
         {/* Where We Are Text Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2">
+          <div className="flex flex-col items-center md:items-start md:w-1/2">
             <h2 className="text-3xl font-semibold mb-4">Where are we?</h2>
             <p className="text-gray-600 mb-6 w-[80%]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -29,7 +29,7 @@ const LocationComponent = () => {
           </div>
 
           {/* Leaflet Map Section */}
-          <div className="md:w-1/2 flex justify-center z-0">
+          <div className="w-full md:w-1/2 flex justify-center z-0">
             <MapContainer
               center={position}
               zoom={13}

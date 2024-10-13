@@ -23,7 +23,7 @@ const AboutUsCards = () => {
     ]
 
     return (
-        <section className="py-10">
+        <section className="py-10" id='aboutCards'>
             <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
                 {
                     cardsList.map((item, index) => {
