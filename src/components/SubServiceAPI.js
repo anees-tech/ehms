@@ -31,15 +31,15 @@ const SubServiceAPI = [
     title1: "Psychiatric Services",
     title1Detail:
       "We offer specialized psychiatric services to address various mental health issues. Our team is well-equipped to diagnose and treat conditions such as depression, anxiety, bipolar disorder, and more.",
-    img1: "/assets/subServices/",
+    img1: "/assets/psychiatric-services-1.jpg",
     title2Detail:
       "Our psychiatrists provide ongoing medication management, ensuring that prescriptions are tailored to the patient's specific mental health needs.",
     title2: "Medication Management",
-    img2: "/assets/subServices/",
+    img2: "/assets/psychiatric-services-2.jpg",
     title3: "Comprehensive Assessment",
     title3Detail:
       "A thorough psychiatric evaluation is the cornerstone of effective treatment. We assess both medical and psychological factors.",
-    img3: "/assets/subServices/",
+    img3: "/assets/psychiatric-services-3.jpg",
   },
   {
     id: 3,
