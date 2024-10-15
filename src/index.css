@@ -6,7 +6,9 @@ button, a, img, input, textarea , select{
     user-select: none;
 }
 
+
 #root{
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

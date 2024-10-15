@@ -1,31 +1,19 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const DropDown = () => {
   const [isOpen, setIsOpen] = useState(false); // State to track submenu visibility
-  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev); // Toggle the submenu visibility
-  };
-
-  const handleScrollToSection = (route, id) => {
-    navigate(route); // Navigate to the specified route
-    setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); // Scroll to the element with the given id
-    }, 0);
-    toggleMenu(); // Close the dropdown after navigation
   };
 
   return (
     <StyledWrapper>
       <div className="menu">
         <div className="item">
-          <div
-            className="link hover:text-white duration-500 flex justify-center items-center"
-            onClick={toggleMenu}
-          >
+          <div className="link hover:text-white duration-500 flex justify-center items-center" onClick={toggleMenu}>
             <span>You Want?</span>
             <svg viewBox="0 0 360 360" space="preserve">
               <g id="SVGRepo_iconCarrier">
@@ -36,63 +24,42 @@ const DropDown = () => {
               </g>
             </svg>
           </div>
-          {isOpen && (
+          {isOpen && ( // Conditional rendering for the submenu
             <div className="submenu">
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/psychological-services", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/psychological-services" onClick={toggleMenu} className="submenu-link">
                   Psychological Services
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/psychiatric-services", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/psychiatric-services" onClick={toggleMenu} className="submenu-link">
                   Psychiatry Services
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/speech-language-therapy", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/speech-language-therapy" onClick={toggleMenu}  className="submenu-link">
                   Speech-Language Therapy
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/career-counseling", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/career-counseling" onClick={toggleMenu} className="submenu-link">
                   Career Counseling
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/rehab-services", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/rehab-services" onClick={toggleMenu} className="submenu-link">
                   Addiction / Rehab Counseling
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/marital-counseling", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/marital-counseling" onClick={toggleMenu} className="submenu-link">
                   Marital Counseling
-                </div>
+                </Link>
               </div>
               <div className="submenu-item">
-                <div
-                  onClick={() => handleScrollToSection("/service/treatment-psychiatric-illnesses", "subService")}
-                  className="submenu-link"
-                >
+                <Link to="/service/treatment-psychiatric-illnesses" onClick={toggleMenu} className="submenu-link">
                   Treatment of Psychiatric Illnesses
-                </div>
+                </Link>
               </div>
             </div>
           )}

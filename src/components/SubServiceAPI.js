@@ -1,6 +1,7 @@
 const SubServiceAPI = [
   {
     id: 1,
+    servicesTitle: "Psychological Services",
     servicesName: "psychological-services",
     serviceDetail:
       "Offering tailored therapy sessions to help individuals manage emotional and mental health challenges, focusing on improving overall well-being and coping strategies.",
@@ -21,6 +22,7 @@ const SubServiceAPI = [
   },
   {
     id: 2,
+    servicesTitle: "Psychiatric Services",
     servicesName: "psychiatric-services",
     serviceDetail:
       "Providing medical assessments and treatments for mental health conditions, with licensed psychiatrists guiding patients through medication management and therapy.",
@@ -41,6 +43,7 @@ const SubServiceAPI = [
   },
   {
     id: 3,
+    servicesTitle: "Speech Language Therapy",
     servicesName: "speech-language-therapy",
     serviceDetail:
       "Assisting individuals with speech and communication difficulties, improving language skills, fluency, and comprehension for better daily interactions.",
@@ -61,6 +64,7 @@ const SubServiceAPI = [
   },
   {
     id: 4,
+    servicesTitle: "Career Counseling",
     servicesName: "career-counseling",
     serviceDetail:
       "Helping individuals identify their strengths and career goals, offering guidance on education, job search strategies, and professional development.",
@@ -81,6 +85,7 @@ const SubServiceAPI = [
   },
   {
     id: 5,
+    servicesTitle: "Rehab Services",
     servicesName: "rehab-services",
     serviceDetail:
       "Supporting recovery and rehabilitation from physical injuries or mental health issues, aiming to restore independence and improve quality of life.",
@@ -101,6 +106,7 @@ const SubServiceAPI = [
   },
   {
     id: 6,
+    servicesTitle: "Marital Counseling",
     servicesName: "marital-counseling",
     serviceDetail:
       "Fostering better communication and conflict resolution between couples, offering therapy to strengthen relationships and resolve marital issues.",
@@ -121,6 +127,7 @@ const SubServiceAPI = [
   },
   {
     id: 7,
+    servicesTitle: "Treatment Psychiatric Illnesses",
     servicesName: "treatment-psychiatric-illnesses",
     serviceDetail:
       "Specializing in diagnosing and treating psychiatric disorders, focusing on holistic care to manage and improve mental health conditions.",
