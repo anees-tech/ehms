@@ -22,7 +22,7 @@ function SubServices() {
     return (
         <div id='subService' className="min-h-screen h-full flex flex-col">
             <Navbar />
-            <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesTitle} />
+            <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesName} />
             <div className="container mx-auto p-4 flex-1">
                 {matchedService ? (
                     <div className="space-y-12 max-w-screen-lg mx-auto">
