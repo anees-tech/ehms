@@ -5,7 +5,7 @@ const TraumaTherapySection = () => {
     <section className="bg-gray-50 w-full  py-12">
       <div className="contentDiv flex flex-col lg:flex-row items-center justify-between max-w-screen-xl h-[400px] mx-auto px-4 lg:px-8">
         {/* Left Content */}
-        <div className="lg:w-1/2 w-full mb-8 lg:mb-0 text-center lg:text-left px-4 lg:px-0">
+        <div data-aos="slide-right" className="lg:w-1/2 w-full mb-8 lg:mb-0 text-center lg:text-left px-4 lg:px-0">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
             Trauma-Focused Therapy
           </h2>
@@ -21,7 +21,7 @@ const TraumaTherapySection = () => {
         </div>
 
         {/* Right Images */}
-        <div className="lg:w-1/2 w-full lg:flex hidden justify-center shadow-none lg:justify-end">
+        <div data-aos="slide-left" className="lg:w-1/2 w-full lg:flex hidden justify-center shadow-none lg:justify-end">
           <div className="relative w-full lg:w-4/5 px-10 select-none">
             {/* Main Image */}
             <img

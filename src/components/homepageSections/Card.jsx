@@ -1,8 +1,8 @@
 import React from "react";
 
-const Card = ({ imgSrc, title, para, index }) => {
+const Card = ({ imgSrc, title, para, index, animation }) => {
   return (
-    <div className="relative flex h-[28rem] w-72 lg:w-76 flex-col rounded-xl bg-white bg-clip-border border text-gray-700 shadow-md mb-6 self-start  hover:shadow-lg hover:shadow-[#219ebc] transition ease-in-out hover:duration-500 hover:scale-105">
+    <div data-aos={animation} className="relative flex h-[28rem] w-72 lg:w-76 flex-col rounded-xl bg-white bg-clip-border border text-gray-700 shadow-md mb-6 self-start  hover:shadow-lg hover:shadow-[#219ebc] transition ease-in-out hover:duration-500 hover:scale-105">
       {imgSrc ? (
         <img
           src={imgSrc}

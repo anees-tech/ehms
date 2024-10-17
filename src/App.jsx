@@ -9,7 +9,15 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SubServices from "./components/SubServices/SubServices";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 function App() {
+  useEffect(() => {
+    Aos.init({ once: true, duration: 1000 });
+    Aos.refresh();
+  }, []);
   return (
     <div className="main">
       <Router>

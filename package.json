@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "aos": "^3.0.0-beta.6",
     "autoprefixer": "^10.4.20",
     "globals": "^15.10.0",
     "leaflet": "^1.9.4",

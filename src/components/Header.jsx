@@ -4,10 +4,10 @@ import HeroSection from "./HeroSection";
 
 const Header = () => {
   return (
-    <>
+    <div data-aos="fade-up">
       <Navbar />
       <HeroSection/>
-    </>
+    </div>
   );
 };
 

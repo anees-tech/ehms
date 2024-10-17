@@ -33,10 +33,10 @@ const FAQs = () => {
 
     return (
         <div className=" bg-gray-50 py-16">
-            <h2 className="text-center text-4xl font-bold">FAQs</h2>
+            <h2 data-aos="zoom-in" className="text-center text-4xl font-bold">FAQs</h2>
             <div className="w-full max-w-7xl flex-col md:flex-row gap-10 flex justify-center mx-auto">
                 {/* FAQs Section */}
-                <div className="w-full md:w-2/3 p-5">
+                <div data-aos="slide-right" className="w-full md:w-2/3 p-5">
                     <h2 className="text-xl md:text-2xl font-bold mb-5">Any Questions</h2>
                     <p className="text-gray-600 mb-8 ">
                         When deciding which charity to donate to, it's important to do your research and find one that aligns with your values and interests.
@@ -65,7 +65,7 @@ const FAQs = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="w-full lg:w-1/2 p-5 hidden md:flex flex-col space-y-6 select-none">
+                <div data-aos="slide-left" className="w-full lg:w-1/2 p-5 hidden md:flex flex-col space-y-6 select-none">
                     <div className="relative">
                         <img
                             src="assets/faq_image_1.webp"

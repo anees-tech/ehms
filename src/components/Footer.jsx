@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <footer className="footer-bg text-white">
     <div className="footer-wrapper py-10">
-      <div className="container mx-auto px-4 ">
+      <div className="container mx-auto px-4 " data-aos="zoom-in-up ease-in-out">
         {/* First Row - Logo and Menu */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
           {/* Logo */}

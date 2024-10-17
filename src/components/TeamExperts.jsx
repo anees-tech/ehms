@@ -28,7 +28,7 @@ const Team = () => {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-12">
+        <div data-aos="slide-down" className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-gray-900">
             Our <span className="text-yellow-500">Expert Team</span>
           </h2>
@@ -41,6 +41,11 @@ const Team = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
           {teamMembers.map((member, index) => (
             <div
+            data-aos={
+              (index % 4 === 0 || index % 4 === 1) ? "fade-right" : 
+              "fade-left"
+            }
+            
               key={index}
               className="bg-white rounded-lg shadow-md text-center py-5 transition-transform duration-200 transform hover:scale-105"
             >
