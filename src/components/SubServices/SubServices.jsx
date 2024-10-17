@@ -6,27 +6,25 @@ import SubServiceAPI from '../SubServiceAPI';
 import AboutHeroSection from '../AboutSections/AboutHeroSection';
 
 function SubServices() {
-    const { subServices } = useParams(); // Get the subServices from URL parameters
-    const [matchedService, setMatchedService] = useState(null); // State to hold matched service
+    const { subServices } = useParams();
+    const [matchedService, setMatchedService] = useState(null);
 
-    // Function to find matching services based on subServices
     function matchingServices() {
         return SubServiceAPI.find(service => service.servicesName === subServices);
     }
 
     useEffect(() => {
         const service = matchingServices();
-        setMatchedService(service); // Set the matched service
+        setMatchedService(service);
     }, [subServices]);
 
     return (
         <div id='subService' className="min-h-screen h-full flex flex-col">
             <Navbar />
-            <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesName} />
+            <AboutHeroSection img={matchedService?.servicesName} h2={matchedService?.servicesTitle} />
             <div className="container mx-auto p-4 flex-1">
                 {matchedService ? (
                     <div className="space-y-12 max-w-screen-lg mx-auto">
-                        {/* Section 1 */}
                         <div className="flex flex-col-reverse lg:flex-row items-center lg:space-x-8 min-h-[50vh]">
                             <div className="lg:w-1/2 space-y-4">
                                 <h1 className="text-3xl font-bold">{matchedService.title1}</h1>
@@ -34,18 +32,16 @@ function SubServices() {
                             </div>
                             <div className="lg:w-1/2">
                                 <img
-                                    src={matchedService.image1}
                                     alt={matchedService.title1}
                                     className="w-full h-auto rounded-lg shadow-lg"
+                                    src={matchedService.img1}
                                 />
                             </div>
                         </div>
-
-                        {/* Section 2 */}
                         <div className="flex flex-col lg:flex-row items-center lg:space-x-8 min-h-[50vh]">
                             <div className="lg:w-1/2">
                                 <img
-                                    src={matchedService.image2}
+                                    src={matchedService.img2}
                                     alt={matchedService.title2}
                                     className="w-full h-auto rounded-lg shadow-lg"
                                 />
@@ -55,8 +51,6 @@ function SubServices() {
                                 <p className="text-lg">{matchedService.title2Detail}</p>
                             </div>
                         </div>
-
-                        {/* Section 3 */}
                         <div className="flex flex-col-reverse lg:flex-row items-center lg:space-x-8 min-h-[50vh]">
                             <div className="lg:w-1/2 space-y-4">
                                 <h2 className="text-2xl font-semibold">{matchedService.title3}</h2>
@@ -64,7 +58,7 @@ function SubServices() {
                             </div>
                             <div className="lg:w-1/2">
                                 <img
-                                    src={matchedService.image3}
+                                    src={matchedService.img3}
                                     alt={matchedService.title3}
                                     className="w-full h-auto rounded-lg shadow-lg"
                                 />
