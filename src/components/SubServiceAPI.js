@@ -89,7 +89,7 @@ const SubServiceAPI = [
     servicesName: "rehab-services",
     serviceDetail:
       "Supporting individuals recovering from injuries or surgeries, providing physical and occupational therapy for restored mobility and independence.",
-    mainImg: "/assets/subServices/rehab-services.png",
+    mainImg: "/assets/subServices/addiction.jpg",
     servicePath: "/service/rehab-services",
     title1: "Rehabilitation Services",
     title1Detail:
@@ -110,7 +110,7 @@ const SubServiceAPI = [
     servicesName: "marital-counseling",
     serviceDetail:
       "Providing support for couples seeking to resolve conflicts, improve communication, and strengthen their emotional connection within the relationship.",
-    mainImg: "/assets/subServices/marital-counseling.jpg",
+    mainImg: "/assets/subServices/marital.jpg",
     servicePath: "/service/marital-counseling",
     title1: "Marital Counseling",
     title1Detail:
@@ -131,7 +131,7 @@ const SubServiceAPI = [
     servicesName: "treatment-psychiatric-illnesses",
     serviceDetail:
       "Specializing in comprehensive treatment for psychiatric conditions like schizophrenia, bipolar disorder, and anxiety, promoting long-term recovery and mental well-being.",
-    mainImg: "/assets/subServices/psychiatric-illness.jpg",
+    mainImg: "/assets/subServices/treatment.jpg",
     servicePath: "/service/treatment-psychiatric-illnesses",
     title1: "Treatment for Psychiatric Illnesses",
     title1Detail:
