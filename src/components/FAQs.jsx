@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const FAQs = () => {
-    const [openIndex, setOpenIndex] = useState(null); // Track which item is open
+    const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
         if (openIndex === index) {
-            setOpenIndex(null); // Close if the same item is clicked again
+            setOpenIndex(null);
         } else {
-            setOpenIndex(index); // Open the clicked item
+            setOpenIndex(index);
         }
     };
 
@@ -35,7 +35,6 @@ const FAQs = () => {
         <div className=" bg-gray-50 py-16">
             <h2 data-aos="zoom-in" className="text-center text-4xl font-bold">FAQs</h2>
             <div className="w-full max-w-7xl flex-col md:flex-row gap-10 flex justify-center mx-auto">
-                {/* FAQs Section */}
                 <div data-aos="slide-right" className="w-full md:w-2/3 p-5">
                     <h2 className="text-xl md:text-2xl font-bold mb-5">Any Questions</h2>
                     <p className="text-gray-600 mb-8 ">
@@ -64,7 +63,6 @@ const FAQs = () => {
                     </div>
                 </div>
 
-                {/* Image Section */}
                 <div data-aos="slide-left" className="w-full lg:w-1/2 p-5 hidden md:flex flex-col space-y-6 select-none">
                     <div className="relative">
                         <img

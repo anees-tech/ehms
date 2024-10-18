@@ -1,43 +1,50 @@
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import Services from "./components/Services";
-import { Link } from "react-router-dom";
-import "./index.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import SubServices from "./components/SubServices/SubServices";
-
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import "./index.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+const Home = React.lazy(() => import('./components/Home'));
+const About = React.lazy(() => import('./components/About'));
+const Contact = React.lazy(() => import('./components/Contact'));
+const Services = React.lazy(() => import('./components/Services'));
+const LazySubServices = React.lazy(() => import('./components/SubServices/SubServices'));
 
 function App() {
   useEffect(() => {
     Aos.init({ once: true, duration: 1000 });
     Aos.refresh();
   }, []);
+
   return (
     <div className="main">
       <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutUs" element={<About />} />
-          <Route path="/contactUs" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/service/:subServices" element={<SubServices />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<div>
+          <Navbar />
+          <div className="min-h-[55vh] flex flex-col items-center justify-center bg-gray-100">
+            <h1 className="text-9xl font-extrabold text-gray-800 tracking-widest animate-bounce">
+              Loading
+            </h1>
+          </div>
+          <Footer />
+        </div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/aboutUs" element={<About />} />
+            <Route path="/contactUs" element={<Contact />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/service/:subServices" element={<LazySubServices />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </Router>
     </div>
   );
 }
 
-// Not Found Page
-
 const NotFound = () => {
-
   return (
     <>
       <Navbar />
@@ -50,19 +57,14 @@ const NotFound = () => {
 export const NotFoundBody = () => {
   return (
     <div className="min-h-[55vh] flex flex-col items-center justify-center bg-gray-100">
-      {/* 404 text with infinite bounce animation */}
       <h1 className="text-9xl font-extrabold text-gray-800 tracking-widest animate-bounce">
         404
       </h1>
 
-      {/* Badge with infinite wiggle animation */}
-      <div
-        className="bg-blue-500 px-2 text-sm rounded rotate-12 absolute animate-pulse"
-      >
+      <div className="bg-blue-500 px-2 text-sm rounded rotate-12 absolute animate-pulse">
         Page Not Found
       </div>
 
-      {/* Button with wiggle effect on hover */}
       <div className="mt-5">
         <Link
           to="/"

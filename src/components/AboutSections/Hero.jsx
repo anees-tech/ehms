@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
 
-  // Slick slider settings
   const settings = {
     dots: true,
     infinite: true,

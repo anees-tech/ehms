@@ -19,7 +19,6 @@ function SubServices() {
         setMatchedService(service);
     }, [subServices]);
 
-    // Utility function to handle text splitting into paragraphs
     const renderParagraphs = (text) => {
         return text.split('\n\n').map((paragraph, index) => (
             <p key={index} className="text-lg">{paragraph}</p>
@@ -39,7 +38,6 @@ function SubServices() {
                         <div className="flex flex-col lg:flex-row items-center lg:space-x-8 min-h-[50vh] gap-12">
                             <div data-aos="fade-right" className="lg:w-1/2 space-y-4 text-justify">
                                 <h1 className="text-3xl font-bold">{matchedService.title1}</h1>
-                                {/* Use the renderParagraphs function to display text properly */}
                                 {renderParagraphs(matchedService.title1Detail)}
                             </div>
                             <div data-aos="fade-left" className="lg:w-1/2 pb-8">
