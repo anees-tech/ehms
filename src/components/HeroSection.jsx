@@ -15,7 +15,7 @@ const HeroSection = () => {
               <span className='text-[#E7AE19]'>Professional <br /></span>
               Psychological Services
             </h1>
-            <p className='text-white text-md md:text-lg mt-5 2xl:mt-8 w-2/3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore unde praesentium velit possimus accusamus ab incidunt quas? Unde, ipsam sit!</p>
+            <p className='text-white text-md md:text-lg mt-5 2xl:mt-8 w-2/3'>Empowering Minds and Enhancing Lives: Discover Our Expert Psychological Services Tailored Just for You, Supporting Your Journey to Mental Well-Being and Personal Growth.</p>
             <button className='bg-[#219EBC] flex items-center justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white '>Our Services <span><FaArrowRight className='ml-2 mt-0.5' /></span>
             </button>
           </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky mirror h-18 top-0 left-0 z-50 scroll-smooth bg-white border-gray-200 focus:scroll-auto shadow-lg w-full">
+    <nav className="mirror h-18 top-0 left-0 z-50 scroll-smooth bg-white border-gray-200 focus:scroll-auto shadow-lg w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2">
         <span className=" h-16 w-28 p-4 self-center text-2xl font-semibold whitespace-nowrap text-white flex items-center space-x-3 rtl:space-x-reverse">
           <Link to="/">
