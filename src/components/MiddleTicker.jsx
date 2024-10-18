@@ -21,7 +21,7 @@ const MiddleTicker = () => {
   ];
 
   return (
-    <section className="py-12">
+    <section data-aos="zoom-out" className="py-12">
       <div className="max-w-6xl mx-auto flex justify-center px-4 md:px-0">
         {/* Responsive adjustments */}
         <div className="w-auto lg:w-auto bg-[#219dbc27] rounded-lg shadow-md py-4 px-4 md:px-10 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-6">

@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div id='form' className="p-4 sm:p-8 md:p-12 lg:p-20 flex justify-center items-center">
       <div className="flex flex-col lg:flex-row max-w-4xl w-full gap-8 lg:gap-20 rounded-lg">
         {/* Left Section - Form */}
-        <div className="w-full lg:w-1/2 p-6 lg:p-8 bg-white rounded-md shadow-2xl">
+        <div data-aos="fade-right" className="w-full lg:w-1/2 p-6 lg:p-8 bg-white rounded-md shadow-2xl">
           <form className="space-y-6">
             <div>
               <label className="block text-gray-700 font-medium mb-2">Full Name</label>
@@ -39,7 +39,7 @@ const ContactForm = () => {
           </form>
         </div>
         {/* Right Section - Info */}
-        <div className="w-full lg:w-1/2 bg-orange-500 p-6 lg:p-8 shadow-2xl flex rounded-md flex-col justify-center items-center text-white">
+        <div data-aos="fade-left" className="w-full lg:w-1/2 bg-orange-500 p-6 lg:p-8 shadow-2xl flex rounded-md flex-col justify-center items-center text-white">
           <h2 className="text-xl sm:text-2xl font-bold mb-4">Can we help you?</h2>
           <p className="text-center mb-6">
             We're happy to answer any questions you may have! Please fill out the support form below and a member of our support staff will respond as soon as possible.
