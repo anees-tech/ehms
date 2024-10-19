@@ -36,7 +36,7 @@ const Team = () => {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center items-center">
         {/* Section Title */}
-        <div data-aos="slide-down" className="text-center mb-12">
+        <div data-aos="zoom-out" className="text-center mb-12">
           <h2 className="text-4xl font-semibold text-gray-900">
             Our <span className="text-yellow-500">Expert Team</span>
           </h2>
