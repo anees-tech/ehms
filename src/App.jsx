@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import './scss/Loader.scss';
 
 const Home = React.lazy(() => import('./components/Home'));
 const About = React.lazy(() => import('./components/About'));
@@ -23,10 +24,11 @@ function App() {
       <Router>
         <Suspense fallback={<div>
           <Navbar />
-          <div className="min-h-[55vh] flex flex-col items-center justify-center bg-gray-100">
-            <h1 className="text-9xl font-extrabold text-gray-800 tracking-widest animate-bounce">
+          <div className=" flex my-48 mx-auto justify-center w-screen">
+            <h1 className="text-5xl mr-5">
               Loading
             </h1>
+            <MultiColorLoader />
           </div>
           <Footer />
         </div>}>
@@ -53,6 +55,20 @@ const NotFound = () => {
     </>
   );
 };
+
+
+const MultiColorLoader = () => {
+  return (
+
+    <div className="loader">
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+    </div>
+  );
+};
+
 
 export const NotFoundBody = () => {
   return (

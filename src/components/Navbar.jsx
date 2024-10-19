@@ -17,7 +17,7 @@ const Navbar = () => {
             <img
               src="/assets/logo.png"
               alt="logo"
-              className="h-16 w-full min-w-32"
+              className="h-16 w-full min-w-44"
             />
           </Link>
         </span>

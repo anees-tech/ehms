@@ -33,7 +33,7 @@ const TraumaTherapySection = () => {
             onClick={() => {
               handleScrollToTop("/services", "service");
             }}
-            className="bg-[#219EBC] w-fit flex items-center justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white"
+            className="bg-[#219EBC] w-fit flex items-center justify-center md:justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white "
           >
             See More
           </button>
