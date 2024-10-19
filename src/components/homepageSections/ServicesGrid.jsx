@@ -25,21 +25,25 @@ const ServicesGrid = () => {
       <div className="flex px-0 py-8 items-center justify-center">
         <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8">
           {/* First Card from ServicesData */}
-          {ServicesData.map((service, index) => (
+          {ServicesData.map((service, index) => {
+          const limitedPara = (wordCount) =>
+            limitWords(service.para, wordCount);
+          return (
             <Card
               key={`service-${index}`}
               title={service.title}
-              para={service.para}
+              para={limitedPara(41)}
               index={index}
               animation="fade-down" // You can assign any animation here
             />
-          ))}
+          )})}
 
           {/* Cards from SubServiceAPI */}
           {SubServiceAPI.map((item, index) => {
             const limitedPara = (wordCount) =>
               limitWords(item.serviceDetail, wordCount);
-            const limitedTitle = (wordCount) => limitWords(item.servicesTitle, wordCount);
+            const limitedTitle = (wordCount) =>
+              limitWords(item.servicesTitle, wordCount);
             return (
               <Card
                 key={`subservice-${index}`} // Unique key for each card from SubServiceAPI
@@ -53,10 +57,9 @@ const ServicesGrid = () => {
                     ? "fade-up"
                     : index % 3 === 1
                     ? "fade-down"
-                    : index % 2 === 0 
+                    : index % 2 === 0
                     ? "fade-down"
                     : "fade-down"
-
                 }
               />
             );

@@ -1,27 +1,49 @@
-import React from 'react';
+import { Link, useNavigate } from "react-router-dom";
 
 const TraumaTherapySection = () => {
+  const navigate = useNavigate();
+
+  const handleScrollToTop = (route, id) => {
+    navigate(route);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }, 0);
+  };
+
   return (
-    <section className="bg-gray-50 w-full  py-12">
+    <section className="bg-gray-50 w-full py-12">
       <div className="contentDiv flex flex-col lg:flex-row items-center justify-between max-w-screen-xl h-[400px] mx-auto px-4 lg:px-8">
         {/* Left Content */}
-        <div data-aos="slide-right" className="lg:w-1/2 w-full mb-8 lg:mb-0 text-center lg:text-left px-4 lg:px-0">
+        <div
+          data-aos="slide-right"
+          className="lg:w-1/2 w-full mb-8 lg:mb-0 text-center lg:text-left px-4 lg:px-0"
+        >
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
             Trauma-Focused Therapy
           </h2>
           <p className="text-gray-600 mb-6">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It
-            has roots in a piece of classical Latin literature from 45 BC, making
-            it over 2000 years old. Richard McClintock, a Latin professor at
-            Hampden-Sydney College in Virginia.
+            Trauma can deeply affect your mental health, leading to challenges
+            such as anxiety, depression, or post-traumatic stress disorder
+            (PTSD). We offer Trauma-Focused Therapy to help you process and heal
+            from these difficult experiences. Our therapy sessions are designed
+            to provide a safe, supportive environment where you can work through
+            trauma at your own pace.
           </p>
-          <button className="bg-[#219EBC] flex items-center justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white">
+          <button
+            onClick={() => {
+              handleScrollToTop("/services", "service");
+            }}
+            className="bg-[#219EBC] w-fit flex items-center justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white"
+          >
             See More
           </button>
         </div>
 
         {/* Right Images */}
-        <div data-aos="slide-left" className="lg:w-1/2 w-full lg:flex hidden justify-center shadow-none lg:justify-end">
+        <div
+          data-aos="slide-left"
+          className="lg:w-1/2 w-full lg:flex hidden justify-center shadow-none lg:justify-end"
+        >
           <div className="relative w-full lg:w-4/5 px-10 select-none">
             {/* Main Image */}
             <img

@@ -19,7 +19,7 @@ const Card = ({ imgSrc, title, para, index, animation, serviceLink }) => {
         <img
           src={imgSrc}
           alt="card"
-          className="relative mx-4 -mt-6 h-60 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 hover:after:bggray-400 hover:after:opacity-50 hover:after:z-30"
+          className="relative object-cover mx-4 -mt-6 h-60 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 hover:after:bggray-400 hover:after:opacity-50 hover:after:z-30"
         />
       ) : null}
       <div className="p-6">

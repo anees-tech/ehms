@@ -123,7 +123,7 @@ const SubServiceAPI = [
     title3: "Effective Communication",
     title3Detail:
       "Effective communication is key to a successful relationship, and our counseling services emphasize improving how couples communicate. We help partners express their emotions and needs more clearly, minimizing misunderstandings and building trust. Through open dialogue and active listening exercises, we aim to enhance emotional intimacy and ensure that both partners feel heard and understood. \n\n Improving communication skills helps couples navigate future challenges more smoothly, leading to a more balanced and supportive relationship. Our goal is to empower couples to foster a deeper connection that lasts.",
-    img3: "/assets/subServices/images/Effective_Communication.webp",
+    img3: "/assets/subServices/images/Effective_Communication.jpg",
   },
   {
     id: 7,

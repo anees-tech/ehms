@@ -20,6 +20,11 @@ const ContactForm = () => {
   const [isFormValid, setIsFormValid] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
+  // Initialize emailjs with publicKey
+  useEffect(() => {
+    emailjs.init("umo8PCs7RkUZI3_qK");
+  }, []);
+
   // Email regex for validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -30,13 +35,12 @@ const ContactForm = () => {
   useEffect(() => {
     const isValid =
       formData.from_name.trim() !== "" &&
-      emailRegex.test(formData.from_email) && // Check valid email
-      phoneRegex.test(formData.contact_number) && // Check valid phone number
+      emailRegex.test(formData.from_email) && 
+      phoneRegex.test(formData.contact_number) && 
       formData.message.trim() !== "";
     setIsFormValid(isValid);
   }, [formData]);
 
-  // Handle input change
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -44,7 +48,6 @@ const ContactForm = () => {
     });
   };
 
-  // Handle phone input change
   const handlePhoneChange = (phone) => {
     setFormData({
       ...formData,
@@ -52,7 +55,6 @@ const ContactForm = () => {
     });
   };
 
-  // Handle blur event to track if the user has interacted with the field
   const handleBlur = (e) => {
     setTouched({
       ...touched,
@@ -60,19 +62,30 @@ const ContactForm = () => {
     });
   };
 
-  // Send email function
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_rgbcy3m", "template_m688z7d", form.current, {
-        publicKey: "umo8PCs7RkUZI3_qK",
-      })
+      .sendForm("service_rgbcy3m", "template_m688z7d", form.current)
       .then(
         () => {
           console.log("SUCCESS!");
           setSuccessMessage("Your message has been sent successfully!");
-          setFormData({ from_name: "", from_email: "", contact_number: "", message: "" }); // Clear form
+
+          // Clear form data and touched fields
+          setFormData({
+            from_name: "",
+            from_email: "",
+            contact_number: "",
+            message: "",
+          });
+
+          setTouched({
+            from_name: false,
+            from_email: false,
+            contact_number: false,
+            message: false,
+          });
 
           // Clear the success message after 7 seconds
           setTimeout(() => {
