@@ -134,7 +134,7 @@ const Footer = () => {
               <ul className="mt-4 space-y-2">
                 <li className="flex items-center space-x-2">
                   <FaEnvelope />
-                  <span>support@essentialmhs.com</span>
+                  <span>contact@essentialmhs.com</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <FaPhoneAlt />

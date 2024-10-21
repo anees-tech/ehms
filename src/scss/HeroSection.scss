@@ -74,3 +74,8 @@ header {
     width: 100vw;
     height: fit-content;
 }
+
+.team_bg{
+    @include imgClassName('../../public/assets/Team-imgs/team-bg.jpg', absolute);
+}
+

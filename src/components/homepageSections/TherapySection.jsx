@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TraumaTherapySection = () => {
   const navigate = useNavigate();
@@ -29,14 +29,16 @@ const TraumaTherapySection = () => {
             to provide a safe, supportive environment where you can work through
             trauma at your own pace.
           </p>
-          <button
-            onClick={() => {
-              handleScrollToTop("/services", "service");
-            }}
-            className="bg-[#219EBC] w-fit flex items-center justify-center md:justify-between px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white "
-          >
-            See More
-          </button>
+          <div className="w-full flex justify-center lg:justify-start">
+            <button
+              onClick={() => {
+                handleScrollToTop("/services", "service");
+              }}
+              className="bg-[#219EBC] w-fit px-4 py-2 md:mt-6 sm:mt-4 mt-2 rounded-lg hover:text-black hover:bg-[#5ac3dd] transition duration-300 text-white"
+            >
+              See More
+            </button>
+          </div>
         </div>
 
         {/* Right Images */}

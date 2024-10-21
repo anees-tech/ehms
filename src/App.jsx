@@ -5,13 +5,17 @@ import "aos/dist/aos.css";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import './scss/Loader.scss';
+import {teamMembers} from "./components/TeamExperts";
+import DoctorProfile from "./components/DoctorProfile.jsx";
+import "./scss/Loader.scss";
 
-const Home = React.lazy(() => import('./components/Home'));
-const About = React.lazy(() => import('./components/About'));
-const Contact = React.lazy(() => import('./components/Contact'));
-const Services = React.lazy(() => import('./components/Services'));
-const LazySubServices = React.lazy(() => import('./components/SubServices/SubServices'));
+const Home = React.lazy(() => import("./components/Home"));
+const About = React.lazy(() => import("./components/About"));
+const Contact = React.lazy(() => import("./components/Contact"));
+const Services = React.lazy(() => import("./components/Services"));
+const LazySubServices = React.lazy(() =>
+  import("./components/SubServices/SubServices")
+);
 
 function App() {
   useEffect(() => {
@@ -22,16 +26,18 @@ function App() {
   return (
     <div className="main">
       <Router>
-        <Suspense fallback={<div>
-          <Navbar />
-          <div className=" flex my-48 mx-auto justify-center w-screen">
-            <h1 className="text-5xl mr-5">
-              Loading
-            </h1>
-            <MultiColorLoader />
-          </div>
-          <Footer />
-        </div>}>
+        <Suspense
+          fallback={
+            <div>
+              <Navbar />
+              <div className=" flex my-48 mx-auto justify-center w-screen">
+                <h1 className="text-5xl mr-5">Loading</h1>
+                <MultiColorLoader />
+              </div>
+              <Footer />
+            </div>
+          }
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/aboutUs" element={<About />} />
@@ -39,12 +45,27 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/service/:subServices" element={<LazySubServices />} />
             <Route path="*" element={<NotFound />} />
+            <Route
+              path="/doctor-profile/:doctorId"
+              element={<DoctorProfileWrapper />} // Use wrapper for passing doctor props
+            />
           </Routes>
         </Suspense>
       </Router>
     </div>
   );
 }
+
+// DoctorProfileWrapper to pass the selected doctor data
+const DoctorProfileWrapper = () => {
+  const doctorId = window.location.pathname.split("/")[2]; // Get the doctorId from URL
+  const doctor = teamMembers[doctorId]; // Use doctorId to fetch the relevant doctor
+  return doctor ? (
+    <DoctorProfile doctor={doctor} />
+  ) : (
+    <div className="text-center">Doctor Not Found</div>
+  );
+};
 
 const NotFound = () => {
   return (
@@ -56,10 +77,8 @@ const NotFound = () => {
   );
 };
 
-
 const MultiColorLoader = () => {
   return (
-
     <div className="loader">
       <div className="circle"></div>
       <div className="circle"></div>
@@ -68,7 +87,6 @@ const MultiColorLoader = () => {
     </div>
   );
 };
-
 
 export const NotFoundBody = () => {
   return (

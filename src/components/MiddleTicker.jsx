@@ -11,12 +11,12 @@ const MiddleTicker = () => {
     {
       icon: <FaEnvelope />,
       text: 'Email',
-      details: 'Helpfull@gmail.com',
+      details: 'contact@essentialmhs.com',
     },
     {
       icon: <FaMapMarkerAlt />,
       text: 'Location',
-      details: 'View on Google Map',
+      details: 'Hameed Latif Hospital, Lahore',
     },
   ];
 

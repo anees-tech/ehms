@@ -14,7 +14,7 @@ const DropDown = () => {
       <div className="menu">
         <div className="item">
           <div className="link hover:text-white duration-500 flex justify-center items-center" onClick={toggleMenu}>
-            <span>You Want?</span>
+            <span>What We Offer</span>
             <svg viewBox="0 0 360 360" space="preserve">
               <g id="SVGRepo_iconCarrier">
                 <path
@@ -23,9 +23,9 @@ const DropDown = () => {
                 />
               </g>
             </svg>
-          </div>
+          </div> 
           {isOpen && ( // Conditional rendering for the submenu
-            <div className="submenu">
+            <div className="submenu md:-ml-10">
               <div className="submenu-item">
                 <Link to="/service/psychological-services" onClick={toggleMenu} className="submenu-link">
                   Psychological Services
@@ -133,7 +133,7 @@ const StyledWrapper = styled.div`
     border-radius: 0 0 16px 16px;
     left: 0;
     width: 150%;
-    margin-left: -25%;
+    // margin-left: -25%;
     margin-top: 1px;
     backdrop-filter: blur(30px);
     overflow: hidden;
