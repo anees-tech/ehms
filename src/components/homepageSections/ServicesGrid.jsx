@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import SubServiceAPI from "../SubServiceAPI";
 
@@ -17,6 +17,20 @@ const limitWords = (text, wordLimit) => {
 };
 
 const ServicesGrid = () => {
+  const [cardLimit, setCardLimit] = useState(SubServiceAPI.length);
+
+  useEffect(() => {
+    // Function to update screen size
+    const handleResize = () => {
+      const mobileView = window.innerWidth < 480; // Define mobile breakpoint
+      setCardLimit(mobileView ? 3 : SubServiceAPI.length); // Show only 3 cards on mobile
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize); // Listen for window resize
+    return () => window.removeEventListener("resize", handleResize); // Cleanup listener on unmount
+  }, []);
+
   return (
     <div id="serviceGrid">
       <h1 data-aos="zoom-in" className="text-center text-4xl py-16 font-bold">
@@ -26,38 +40,34 @@ const ServicesGrid = () => {
         <div className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-8">
           {/* First Card from ServicesData */}
           {ServicesData.map((service, index) => {
-          const limitedPara = (wordCount) =>
-            limitWords(service.para, wordCount);
-          return (
-            <Card
-              key={`service-${index}`}
-              title={service.title}
-              para={limitedPara(41)}
-              index={index}
-              animation="fade-down" // You can assign any animation here
-            />
-          )})}
-
-          {/* Cards from SubServiceAPI */}
-          {SubServiceAPI.map((item, index) => {
-            const limitedPara = (wordCount) =>
-              limitWords(item.serviceDetail, wordCount);
-            const limitedTitle = (wordCount) =>
-              limitWords(item.servicesTitle, wordCount);
+            const limitedPara = (wordCount) => limitWords(service.para, wordCount);
             return (
               <Card
-                key={`subservice-${index}`} // Unique key for each card from SubServiceAPI
+                key={`service-${index}`}
+                title={service.title}
+                para={limitedPara(41)}
+                index={index}
+                animation="fade-down" 
+              />
+            );
+          })}
+
+          {/* Limited Cards from SubServiceAPI based on screen size */}
+          {SubServiceAPI.slice(0, cardLimit).map((item, index) => {
+            const limitedPara = (wordCount) => limitWords(item.serviceDetail, wordCount);
+            const limitedTitle = (wordCount) => limitWords(item.servicesTitle, wordCount);
+            return (
+              <Card
+                key={`subservice-${index}`}
                 imgSrc={item.mainImg}
-                title={limitedTitle(2)} // Adjusted word count for the first card
-                para={limitedPara(10)} // Adjusted word count for the first card
-                index={index + 1} // Offset index to account for the manual card
+                title={limitedTitle(2)}
+                para={limitedPara(10)}
+                index={index + 1}
                 serviceLink={item.servicesName}
                 animation={
                   index % 3 === 0
                     ? "fade-up"
                     : index % 3 === 1
-                    ? "fade-down"
-                    : index % 2 === 0
                     ? "fade-down"
                     : "fade-down"
                 }

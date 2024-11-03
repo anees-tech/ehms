@@ -155,7 +155,7 @@ const ContactForm = () => {
                 </p>
               )}
             </div>
-            <div>
+            <div className="w-full overflow-hidden">
               <label className="block text-gray-700 font-medium mb-2">
                 Phone Number
               </label>
@@ -164,7 +164,7 @@ const ContactForm = () => {
                 value={formData.contact_number}
                 onChange={handlePhoneChange}
                 onBlur={() => setTouched({ ...touched, contact_number: true })}
-                className="w-full border border-gray-300 rounded-lg border-none"
+                className="border border-gray-300 rounded-lg border-none"
               /> 
               {touched.contact_number && !phoneRegex.test(formData.contact_number) && (
                 <p className="text-red-500 text-sm mt-1">

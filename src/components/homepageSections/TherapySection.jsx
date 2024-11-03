@@ -21,7 +21,7 @@ const TraumaTherapySection = () => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
             Trauma-Focused Therapy
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600">
             Trauma can deeply affect your mental health, leading to challenges
             such as anxiety, depression, or post-traumatic stress disorder
             (PTSD). We offer Trauma-Focused Therapy to help you process and heal

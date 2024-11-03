@@ -36,7 +36,7 @@ function SubServices() {
                 {matchedService ? (
                     <div className="space-y-12 max-w-screen-lg mx-auto">
                         <div className="flex flex-col lg:flex-row items-center lg:space-x-8 min-h-[50vh] gap-12">
-                            <div data-aos="fade-right" className="lg:w-1/2 space-y-4 text-justify">
+                            <div data-aos="fade-right" className="lg:w-1/2 space-y-4 text-left sm:text-justify">
                                 <h1 className="text-3xl font-bold">{matchedService.title1}</h1>
                                 {renderParagraphs(matchedService.title1Detail)}
                             </div>
@@ -56,13 +56,13 @@ function SubServices() {
                                     className="w-full h-auto rounded-lg shadow-lg"
                                 />
                             </div>
-                            <div data-aos="fade-left" className="lg:w-1/2 space-y-4 text-justify">
+                            <div data-aos="fade-left" className="lg:w-1/2 space-y-4 text-left sm:text-justify">
                                 <h2 className="text-2xl font-semibold">{matchedService.title2}</h2>
                                 {renderParagraphs(matchedService.title2Detail)}
                             </div>
                         </div>
                         <div className="flex flex-col lg:flex-row items-center lg:space-x-8 min-h-[50vh] gap-12">
-                            <div data-aos="fade-right" className="lg:w-1/2 space-y-4 text-justify">
+                            <div data-aos="fade-right" className="lg:w-1/2 space-y-4 text-left sm:text-justify">
                                 <h2 className="text-2xl font-semibold">{matchedService.title3}</h2>
                                 {renderParagraphs(matchedService.title3Detail)}
                             </div>

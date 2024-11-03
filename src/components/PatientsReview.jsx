@@ -1,4 +1,5 @@
-import React from "react";
+import { useState, useEffect } from "react";
+
 
 const Star = ({ filled }) => (
   <svg
@@ -91,6 +92,19 @@ const PatientsReview = () => {
       : text;
   };
 
+  const [cardLimit, setCardLimit] = useState(cardData.length);
+  useEffect(() => {
+    // Function to update screen size
+    const handleResize = () => {
+      const mobileView = window.innerWidth < 480; // Define mobile breakpoint
+      setCardLimit(mobileView ? 4 : cardData.length); // Show only 3 cards on mobile
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", handleResize); // Listen for window resize
+    return () => window.removeEventListener("resize", handleResize); // Cleanup listener on unmount
+  }, []);
+
   return (
     <div id="testimonial">
       {/* Title */}
@@ -106,7 +120,7 @@ const PatientsReview = () => {
       {/* Cards */}
       <div className="flex justify-center items-center bg-[#FC8602]">
         <div className="bg-[#FC8602] p-8 grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4">
-          {cardData.map((patient, index) => {
+          {cardData.slice(0, cardLimit).map((patient, index) => {
             const limitedPara = (wordCount) =>
               limitWords(patient.review, wordCount);
             return (
