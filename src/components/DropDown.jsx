@@ -26,37 +26,37 @@ const DropDown = () => {
           </div> 
           {isOpen && ( // Conditional rendering for the submenu
             <div className="submenu md:-ml-10">
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/psychological-services" onClick={toggleMenu} className="submenu-link">
                   Psychological Services
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/psychiatric-services" onClick={toggleMenu} className="submenu-link">
                   Psychiatry Services
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/speech-language-therapy" onClick={toggleMenu}  className="submenu-link">
                   Speech-Language Therapy
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/career-counseling" onClick={toggleMenu} className="submenu-link">
                   Career Counseling
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/rehab-services" onClick={toggleMenu} className="submenu-link">
                   Addiction / Rehab Counseling
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/marital-counseling" onClick={toggleMenu} className="submenu-link">
                   Marital Counseling
                 </Link>
               </div>
-              <div className="submenu-item">
+              <div className="submenu-item w-full">
                 <Link to="/service/treatment-psychiatric-illnesses" onClick={toggleMenu} className="submenu-link">
                   Treatment of Psychiatric Illnesses
                 </Link>
@@ -152,7 +152,7 @@ const StyledWrapper = styled.div`
     background: white;
   }
 
-  .submenu .submenu-item {
+  .submenu .submenu-item w-full {
     transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -165,7 +165,7 @@ const StyledWrapper = styled.div`
     transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .submenu .submenu-item:last-child .submenu-link {
+  .submenu .submenu-item w-full:last-child .submenu-link {
     border-bottom: none;
   }
 
